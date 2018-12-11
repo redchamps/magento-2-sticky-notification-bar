@@ -1,0 +1,32 @@
+.sticky-notification-bar {
+    top:0;
+    width: 100%;
+    z-index: 99999;
+    text-align: center;
+    line-height: 35px;
+}
+
+.sticky-notification-bar .content {
+    font-weight: bold;
+    text-align: center;
+    min-height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+/* For mobile phones: */
+
+@media only screen and (max-width: 768px) {
+    /* For tablets: */
+    .sticky-notification-bar .content {
+        font-size: 12px;
+        padding-bottom: 10px;
+        word-break: break-word;
+    }
+}
+
+.coupon-code {
+    border: 0.1px dashed;
+    margin-left: 20px;
+    padding: 3px;
+}

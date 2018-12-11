@@ -1,0 +1,17 @@
+<?php $enabled = $this->getSetting('enabled');?>
+<?php if($enabled):?>
+    <div
+        class="sticky-notification-bar"
+        style="background-color: <?php echo $this->getSetting('background_color')?>; color: <?php echo $this->getSetting('text_color')?>;">
+        <span class="content"><?php echo $this->getSetting('content')?></span>
+    </div>
+    <style>
+        <?php echo $this->getSetting("custom_css")?>
+    </style>
+    <script>
+        require(["jquery"], function ($) {
+            $(".sticky-notification-bar").css('position', 'fixed');
+            $(".page-header").css("margin-top", $('.sticky-notification-bar').height()+"px");
+        });
+    </script>
+<?php endif;?>

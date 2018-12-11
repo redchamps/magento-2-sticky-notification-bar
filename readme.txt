@@ -1,0 +1,1 @@
+This will display a sticky notification bar on top of website.

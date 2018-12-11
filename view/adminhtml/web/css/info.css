@@ -1,0 +1,13 @@
+.redchamps-info {
+    background: #fffbbb;
+    height: 25px;
+    border-radius: 0;
+    color: #333;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+    padding:20px 5px 5px 55px;"
+    position: relative;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-image: url('../images/rc-logo.png')
+}

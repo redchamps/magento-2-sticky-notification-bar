@@ -1,0 +1,20 @@
+{
+    "name": "RedChamps/NotificationBar",
+    "description": "This will display a sticky notification bar on top of website.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "redchamps/module-core": "*"
+    },
+    "license": [
+        "RedChamps EULA"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RedChamps\\NotificationBar\\": ""
+        }
+    }
+}

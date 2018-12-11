@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!--head>
+        <css src="RedChamps_NotificationBar::css/styles.css"/>
+    </head-->
+    <body>
+        <referenceContainer name='root'>
+            <block
+                    class='RedChamps\NotificationBar\Block\Init'
+                    name='RedChamps_NotificationBar_Block_Init'
+                    ifconfig='notification_bar/general/enabled'
+            />
+        </referenceContainer>
+        <referenceContainer name="after.body.start">
+            <block template="RedChamps_NotificationBar::notification.phtml" class="RedChamps\NotificationBar\Block\Notification" name="sticky.notification"/>
+        </referenceContainer>
+    </body>
+</page>
