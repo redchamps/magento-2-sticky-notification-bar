@@ -1,20 +1,13 @@
 <?php
 namespace RedChamps\NotificationBar\Block\Adminhtml\System\Config\FrontModel;
 
-class ColorPicker extends \Magento\Config\Block\System\Config\Form\Field 
-{
-    /**
-     * @param \Magento\Backend\Block\Template\Context $context
-     * @param Registry $coreRegistry
-     * @param array $data
-     */
-    public function __construct(
-        \Magento\Backend\Block\Template\Context $context, array $data = []
-    ) {
-        parent::__construct($context, $data);
-    }
+use Magento\Config\Block\System\Config\Form\Field;
+use Magento\Framework\Data\Form\Element\AbstractElement;
 
-    protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
+class ColorPicker extends Field
+{
+    protected function _getElementHtml(AbstractElement $element)
+    {
         $html = $element->getElementHtml();
         $value = $element->getData('value');
 
@@ -22,11 +15,11 @@ class ColorPicker extends \Magento\Config\Block\System\Config\Form\Field
             require(["jquery","jquery/colorpicker/js/colorpicker"], function ($) {
                 $(document).ready(function () {
                     var $el = $("#' . $element->getHtmlId() . '");
-                    $el.css("backgroundColor", "'. $value .'");
+                    $el.css("backgroundColor", "' . $value . '");
 
                     // Attach the color picker
                     $el.ColorPicker({
-                        color: "'. $value .'",
+                        color: "' . $value . '",
                         onChange: function (hsb, hex, rgb) {
                             $el.css("backgroundColor", "#" + hex).val("#" + hex);
                         }
@@ -36,5 +29,4 @@ class ColorPicker extends \Magento\Config\Block\System\Config\Form\Field
             </script>';
         return $html;
     }
-
 }
