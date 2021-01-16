@@ -6,7 +6,7 @@
     "require": {
     },
     "license": [
-        "RedChamps EULA"
+        "OSL-3.0"
     ],
     "autoload": {
         "files": [
