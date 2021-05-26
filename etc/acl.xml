@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="RedChamps_NotificationBar::notification_bar_config" title="Sticky Notification Bar Settings" translate="title" />
+                            <resource id="RedChamps_NotificationBar::config" title="Sticky Notification Bar Settings" translate="title" />
                         </resource>
                     </resource>
                 </resource>

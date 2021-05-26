@@ -7,7 +7,7 @@
         <section id="notification_bar" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Sticky Notification Bar</label>
             <tab>redchamps</tab>
-            <resource>RedChamps_NotificationBar::notification_bar_config</resource>
+            <resource>RedChamps_NotificationBar::config</resource>
             <group id="info" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <frontend_model>RedChamps\NotificationBar\Block\Adminhtml\System\Config\Fieldset\Info</frontend_model>
             </group>

@@ -9,10 +9,12 @@
     </style>
     <?php if ($block->getSetting('is_sticky')):?>
         <script>
-            require(["jquery"], function ($) {
-                $(".sticky-notification-bar").css('position', 'fixed');
-                $(".page-header").css("margin-top", $('.sticky-notification-bar').height()+"px");
-            });
+            window.onload=function() {
+                var notificationBar;
+                notificationBar = document.getElementsByClassName("sticky-notification-bar")[0];
+                notificationBar.style.position = "fixed";
+                document.getElementsByClassName("page-header")[0].style.marginTop = notificationBar.offsetHeight+"px";
+            };
         </script>
     <?php endif;?>
 <?php endif;?>
