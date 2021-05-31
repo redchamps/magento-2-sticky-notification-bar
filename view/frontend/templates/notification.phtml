@@ -9,12 +9,12 @@
     </style>
     <?php if ($block->getSetting('is_sticky')):?>
         <script>
-            window.onload=function() {
+            window.addEventListener("load", function() {
                 var notificationBar;
                 notificationBar = document.getElementsByClassName("sticky-notification-bar")[0];
                 notificationBar.style.position = "fixed";
                 document.getElementsByClassName("page-header")[0].style.marginTop = notificationBar.offsetHeight+"px";
-            };
+            });
         </script>
     <?php endif;?>
 <?php endif;?>
